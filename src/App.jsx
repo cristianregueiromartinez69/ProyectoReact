@@ -7,11 +7,22 @@ import ButtonComponent from './components/ButtonComponent'
 
 function App() {
 
+  const sayHello = () => {
+    console.log("Hello");
+  }
+
+  const handleChange = (e) => {
+    console.log(e.target.value);
+  }
+
   return (
     <>
     <HeaderComponent></HeaderComponent>
     <main className='main-content'>
-     <h2>Hola a todos!</h2>
+     <h2 onClick={sayHello}>Hola a todos!</h2>
+     <input type='text' onChange={handleChange}/>
+     <br/>
+     <br />
      <ButtonComponent></ButtonComponent>
      </main>
     </>
