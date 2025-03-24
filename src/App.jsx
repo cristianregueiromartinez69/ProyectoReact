@@ -7,6 +7,19 @@ import ButtonComponent from './components/ButtonComponent'
 
 function App() {
 
+  //let number = 0;
+
+  const [number, setNumber] = useState(0);
+
+  const [myValue, setMyValue] = useState("")
+
+  let myPlaceHolder = "Escribe aquí";
+
+  const addOne = () => {
+    setNumber(number + 1)
+    console.log(number);
+  }
+
   const sayHello = () => {
     console.log("Hello");
   }
@@ -20,7 +33,12 @@ function App() {
     <HeaderComponent></HeaderComponent>
     <main className='main-content'>
      <h2 onClick={sayHello}>Hola a todos!</h2>
-     <input type='text' onChange={handleChange}/>
+
+
+     <h2 onClick={addOne}>Number: {number}</h2>
+
+
+     <input value={myValue} placeholder={myPlaceHolder} type='text' onChange={handleChange}/>
      <br/>
      <br />
      <ButtonComponent></ButtonComponent>
