@@ -5,7 +5,8 @@ import './App.css'
 import HeaderComponent from './components/HeaderComponent'
 import ButtonComponent from './components/ButtonComponent'
 import Login from './components/Login'
-
+import MovieList from './components/MovieList'
+import AnimalList from './components/AnimalList'
 
 function App() {
 
@@ -56,6 +57,8 @@ function App() {
     <main className='main-content'>
      {user.username  && <h2 onClick={sayHello}>Hola {user.username}!</h2>}
 
+      <MovieList></MovieList>
+      <AnimalList></AnimalList>
       <Login handleLogin={login}></Login>
 
       {condition && <h2>La condición se cumple</h2>}
