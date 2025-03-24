@@ -10,8 +10,10 @@ function App() {
   return (
     <>
     <HeaderComponent></HeaderComponent>
+    <main className='main-content'>
      <h2>Hola a todos!</h2>
      <ButtonComponent></ButtonComponent>
+     </main>
     </>
   )
 }
