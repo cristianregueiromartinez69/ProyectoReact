@@ -24,7 +24,9 @@ function App() {
     blog: "Blog",
     news: "News",
     contact: "Contact us"
-  }
+  };
+
+  const condition = true;
 
   const [user, setUser] = useState({
     
@@ -52,9 +54,18 @@ function App() {
     <>
     <HeaderComponent greetings={greetings} links={links}></HeaderComponent>
     <main className='main-content'>
-     <h2 onClick={sayHello}>Hola {user.username}!</h2>
+     {user.username  && <h2 onClick={sayHello}>Hola {user.username}!</h2>}
 
       <Login handleLogin={login}></Login>
+
+      {condition && <h2>La condición se cumple</h2>}
+      {!condition && <h2>La condición no se cumple</h2>}
+
+      {condition ? (
+        <h2>La condición se cumple</h2>
+      ) : (
+        <h2>La condición no se cumple</h2>
+      )}
 
      <h2 onClick={addOne}>Number: {number}</h2>
 
